@@ -1,4 +1,4 @@
-PHP Variables
+# PHP Variables
 
 Variables in PHP are represented by a dollar sign followed by the name of the variable.
  e.g $name 
@@ -19,7 +19,7 @@ Variables in PHP are represented by a dollar sign followed by the name of the va
       
    Note: $this is a special variable that can't be assigned.
    
-Pre defined variables:
+# Pre defined variables:
    
 PHP provides a large number of predefined variables to all scripts. The variables represent everything from external variables to built-in environment variables, last error messages to last retrieved headers.
 
