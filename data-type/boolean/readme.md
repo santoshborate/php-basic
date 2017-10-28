@@ -52,4 +52,34 @@ var_dump((bool) "false");   // bool(true)
 
 ```
 
+
+# Example1
+ ```
+ <?php
+ $x=TRUE;
+ $y=FALSE;
+ $z=$y OR $x;
+ ?>
+ ```
+
+ Is $z TRUE or FALSE?
+ 
+ 
+ In this case, $z will be FALSE because the above code is equivalent to <?php ($z=$y) OR $x ?> rather than <?php $z=($y OR $x) ?> as might be expected - because the OR operator has lower precedence than assignment operators.
+ 
+ # Example 2
+ 
+ On the other hand, after this code sequence:
+ ```
+ <?php
+ $x=TRUE;
+ $y=FALSE;
+ $z=$y || $x;
+ ?>
+ ```
+ 
+ $z will be TRUE, as expected, because the || operator has higher precedence than assignment:  The code is equivalent to $z=($y OR $x).
+ 
+ 
+ This is why you should NEVER use the OR operator without explicit parentheses around the expression where it is being used.
  
