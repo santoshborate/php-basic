@@ -1,4 +1,4 @@
-#Boolean 
+# Boolean 
 
 This is the simplest type. A boolean expresses a truth value. It can be either TRUE or FALSE. 
 
