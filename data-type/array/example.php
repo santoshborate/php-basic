@@ -21,3 +21,9 @@ $array = array(
 );
 var_dump($array);
 ?>
+
+<?php
+$a = [1, 2, 3, 4 => [1, 3 => [5,6,7]]];
+
+echo count($a);
+?>

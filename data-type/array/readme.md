@@ -60,3 +60,122 @@ array(1) {
   string(1) "d"
 }
 ```
+
+**Example #3 Mixed integer and string keys**
+
+```apacheconfig
+<?php
+$array = array(
+    "foo" => "bar",
+    "bar" => "foo",
+    100   => -100,
+    -100  => 100,
+);
+var_dump($array);
+?>
+```
+
+**Output**
+
+```apacheconfig
+array(4) {
+  ["foo"]=>
+  string(3) "bar"
+  ["bar"]=>
+  string(3) "foo"
+  [100]=>
+  int(-100)
+  [-100]=>
+  int(100)
+}
+
+```
+
+**Example #4 Indexed arrays without key**
+
+```apacheconfig
+
+<?php
+$array = array("foo", "bar", "hello", "world");
+var_dump($array);
+?>
+    
+```
+
+**Output**
+
+```apacheconfig
+array(4) {
+  [0]=>
+  string(3) "foo"
+  [1]=>
+  string(3) "bar"
+  [2]=>
+  string(5) "hello"
+  [3]=>
+  string(5) "world"
+}
+```
+
+It is possible to specify the key only for some elements and leave it out for others: 
+
+**Example #5 Keys not on all elements**
+
+```apacheconfig
+
+<?php
+$array = array(
+         "a",
+         "b",
+    6 => "c",
+         "d",
+);
+var_dump($array);
+?>
+
+```
+
+**Output**
+
+```apacheconfig
+array(4) {
+  [0]=>
+  string(1) "a"
+  [1]=>
+  string(1) "b"
+  [6]=>
+  string(1) "c"
+  [7]=>
+  string(1) "d"
+}
+```
+
+**Example #6 Accessing array elements**
+
+```apacheconfig
+
+<?php
+$array = array(
+    "foo" => "bar",
+    42    => 24,
+    "multi" => array(
+         "dimensional" => array(
+             "array" => "foo"
+         )
+    )
+);
+
+var_dump($array["foo"]);
+var_dump($array[42]);
+var_dump($array["multi"]["dimensional"]["array"]);
+?>
+
+```
+
+**Output**
+
+```apacheconfig
+string(3) "bar"
+int(24)
+string(3) "foo"
+```
