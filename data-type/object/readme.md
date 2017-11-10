@@ -1,5 +1,12 @@
 # Object
 
+An object is a data type which stores data and information on how to process that data.
+
+
+**Class** − This is a programmer-defined data type, which includes local functions as well as local data. You can think of a class as a template for making many instances of the same kind (or class) of object.
+
+
+**Object** − An individual instance of the data structure defined by a class. You define a class once and then make many objects that belong to it. Objects are also known as instance.
 
 **Converting to object**
 
