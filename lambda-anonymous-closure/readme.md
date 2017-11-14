@@ -2,7 +2,7 @@
 
 **Anonymous function** - Function having no name
 
-**Lambda** - It is Anonymous function assigned to any variable and passed as argument ot any function
+**Lambda** - It is Anonymous function assigned to any variable and passed as argument to any function
 
 **Closure** - A closure is a lambda/anonymous function that is aware of its surrounding context through the use of use keyword. It can access a variable outside of the scope where it is defined.
 
