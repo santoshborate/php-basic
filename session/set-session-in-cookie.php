@@ -10,5 +10,7 @@ print_r($_COOKIE);
 print_r( getallheaders());
 
 echo $userAgent = $_SERVER["HTTP_USER_AGENT"];
+
+echo "<br> current session id = ". session_id();
 ?>
 
