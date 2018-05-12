@@ -20,5 +20,28 @@ echo date('Y-m-d', strtotime($date .' -1 day')) , "<br>"; // 2011-12-09
 echo date('Y-m-d', strtotime('2011-12-10 -1 day')) , "<br>"; // 2011-12-09
 
 echo date('Y-m-d', strtotime('2011-12-10 +1 day')) , "<br>"; // 2011-12-11
+
+
+// Get last weeks monday and sunday
+// solution 1
+$Current = Date('N');
+$DaysToSunday = 7 - $Current;
+$DaysFromMonday = $Current - 1;
+$Sunday = Date('d/m/Y', StrToTime("+ {$DaysToSunday} Days"));
+$Monday = Date('d/m/Y', StrToTime("- {$DaysFromMonday} Days"));
+echo "<br>";
+echo $Monday, ' === ', $Sunday , "<br>";
+
+// solution 2
+$start_week = strtotime("last monday midnight");
+$end_week = strtotime("+1 week -1 day",$start_week);
+
+$start_week = date("d/m/Y",$start_week);
+$end_week = date("d/m/Y",$end_week);
+
+echo "<br>";
+echo $start_week.' === '.$end_week ;
+echo "<br>";
+
 ?>
 
